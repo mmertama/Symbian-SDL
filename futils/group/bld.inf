@@ -1,0 +1,14 @@
+PRJ_PLATFORMS
+#ifdef EKA2
+DEFAULT
+#else
+WINS ARMI THUMB
+#endif
+
+PRJ_EXPORTS
+..\inc\fileutils.h
+..\inc\linereader.h
+..\regexp\regexp.h
+
+PRJ_MMPFILES
+..\group\futils.mmp

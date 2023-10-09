@@ -1,0 +1,13 @@
+PRJ_PLATFORMS
+DEFAULT GCCE
+
+PRJ_EXPORTS
+sdl_param.txt \Epoc32\winscw\c\private\e0401099\sdl_param.txt
+background.bmp \Epoc32\winscw\c\private\e0401099\background.bmp
+numbers.bmp \Epoc32\winscw\c\private\e0401099\numbers.bmp
+exit.bmp \Epoc32\winscw\c\private\e0401099\exit.bmp
+drop.bmp \Epoc32\winscw\c\private\e0401099\drop.bmp
+sdl_flags.txt \Epoc32\winscw\c\private\e0401099\sdl_flags.txt
+
+PRJ_MMPFILES
+rain.mmp

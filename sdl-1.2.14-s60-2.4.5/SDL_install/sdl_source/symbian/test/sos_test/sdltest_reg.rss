@@ -1,0 +1,9 @@
+#include <appinfo.rh>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0xe000A7A0
+
+RESOURCE APP_REGISTRATION_INFO
+	{
+	app_file = "sdltest";
+	}

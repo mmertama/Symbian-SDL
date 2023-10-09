@@ -1,0 +1,36 @@
+#include "sdl_linkage.h"
+
+TARGET gles_test.exe
+TARGETTYPE exe
+UID 0 0xe00B1001
+CAPABILITY ReadUserData WriteUserData
+EPOCHEAPSIZE 1000000 20000000
+
+USERINCLUDE .
+SYSTEMINCLUDE \epoc32\include \epoc32\include\SDL 
+#ifdef OPENC
+SYSTEMINCLUDE   \epoc32\include\stdapis
+#else
+SYSTEMINCLUDE   \epoc32\include\libc
+#endif
+SOURCEPATH .
+SOURCE gles_test.c
+
+SOURCEPATH .
+START RESOURCE gles_test_reg.rss
+TARGETPATH \private\10003a3f\apps
+END
+
+LIBRARY euser.lib
+LIBRARY sdl.lib
+LIBRARY sdlexe.lib
+#ifdef OPENC
+LIBRARY   libc.lib
+LIBRARY	  libm.lib
+#else
+LIBRARY 	estlib.lib 
+#endif
+LIBRARY	libgles_cm.lib
+
+STATICLIBRARY sdlmain.lib
+

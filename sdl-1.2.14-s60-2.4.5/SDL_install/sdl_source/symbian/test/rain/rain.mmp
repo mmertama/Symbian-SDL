@@ -1,0 +1,49 @@
+
+#include "sdl_linkage.h"
+
+TARGET rain.exe
+TARGETTYPE exe
+UID 0 0xe0401099
+CAPABILITY ReadUserData
+EPOCHEAPSIZE 1000000 20000000
+
+USERINCLUDE .
+SYSTEMINCLUDE \epoc32\include  +\include\sdl
+
+#ifdef OPENC
+SYSTEMINCLUDE   \epoc32\include\stdapis
+#else
+SYSTEMINCLUDE \epoc32\include\libc
+#endif
+
+SYSTEMINCLUDE		\epoc32\include\platform
+SYSTEMINCLUDE		\epoc32\include\platform\mw
+SYSTEMINCLUDE		\epoc32\include\platform\app
+SYSTEMINCLUDE		\epoc32\include\mw
+
+SOURCEPATH .
+SOURCE rain.cpp
+SOURCE main.cpp
+
+SOURCEPATH .
+START RESOURCE rain_reg.rss
+TARGETPATH \private\10003a3f\apps
+END
+
+LIBRARY euser.lib
+LIBRARY sdl.lib
+LIBRARY sdlexe.lib
+#ifdef OPENC
+LIBRARY   libc.lib
+LIBRARY	  libm.lib
+#else
+LIBRARY 	estlib.lib 
+#endif
+
+//OPTION_REPLACE ARMCC --cpu ARM926EJ-S -O3 -Otime 
+
+OPTION_REPLACE ARMCC --cpu 6 -O3 -Otime 
+
+ALWAYS_BUILD_AS_ARM
+
+STATICLIBRARY sdlmain.lib

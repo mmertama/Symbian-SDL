@@ -1,0 +1,12 @@
+
+//Markus Mertama 2001,
+
+TARGET 		regexp.dll
+TARGETTYPE	dll
+UID 		0x1000008d 0x10000B30
+SOURCEPATH  ..
+SOURCE		regexp.cpp regexpdll.cpp
+USERINCLUDE	..
+SYSTEMINCLUDE	\epoc32\include
+LIBRARY		euser.lib
+

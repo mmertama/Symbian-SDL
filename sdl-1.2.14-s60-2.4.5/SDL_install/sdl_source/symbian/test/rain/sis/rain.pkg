@@ -1,0 +1,37 @@
+; Installation file for Snapper application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"Rain"},(0xe0401099),0,0,0
+
+;Localised Vendor name
+%{"Vendor-EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+*"\certificates\selfsigned.key", "\certificates\selfsigned.cer"
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"..\..\..\..\..\Epoc32\release\armv5\urel\rain.exe"-"!:\sys\bin\rain.exe"
+"..\..\..\..\..\Epoc32\data\z\private\10003a3f\apps\rain_reg.rsc"	-"!:\private\10003a3f\import\apps\rain_reg.rsc"
+"..\sdl_param.txt"-"!:\private\e0401099\sdl_param.txt"
+"..\background.bmp"-"!:\private\e0401099\background.bmp"
+"..\numbers.bmp"-"!:\private\e0401099\numbers.bmp"
+"..\exit.bmp"-"!:\private\e0401099\exit.bmp"
+"..\drop.bmp"-"!:\private\e0401099\drop.bmp"
+"..\sdl_flags.txt"-"!:\private\e0401099\sdl_flags.txt"
+

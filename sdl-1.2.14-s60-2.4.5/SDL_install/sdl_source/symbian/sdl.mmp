@@ -1,0 +1,222 @@
+// *** EPOC MMP  FILE FOR SDL.LIB
+
+#include <sdl_linkage.h>
+
+
+// *** Definitions
+
+#define S60_DEV
+
+//#define STATICSDL
+
+
+
+
+#ifdef STATICSDL
+TARGET              sdl.lib
+TARGETTYPE          lib
+#else
+TARGET              sdl.dll
+TARGETTYPE          dll
+EPOCALLOWDLLDATA  
+UID                 0x1000008d 0xF01F3D69
+CAPABILITY WriteUserData ReadUserData NetworkServices LocalServices
+//VENDORID 0
+#endif 
+	
+DEFFILE sdl.def
+
+
+// *** defines
+
+
+//Enanable this to build on top of OpenC (prereffably set from configure.bat)
+//Warning OPENC is not compatible with all Symbian devices and 
+//at least requires some libraries to be delivered within SDL
+//If a DLL is missing from Symbian, no error note is given, 
+//app just not work - that error is very hard to track
+//- be warned!
+//Symbian estlib is very old, but its delivered with all
+//Symbian devices. I have not noticed significant performance
+//or other issues, except fopen etc. are slow. 
+
+#ifdef SYMBIAN3 
+#define OPENC OPENC
+MACRO SYMBIAN3
+#endif
+
+
+#ifdef OPENC
+MACRO 	OPENC
+#else	
+MACRO	SYMBIANC
+#endif
+
+
+MACRO			SYMBIAN_SERIES60
+//MACRO			SYMBIAN3
+
+
+//MACRO			TEST_BM_DRAW
+
+MACRO			NO_SIGNAL_H
+MACRO			ENABLE_EPOC 
+MACRO			DISABLE_JOYSTICK
+MACRO			DISABLE_CDROM
+//MACRO			DISABLE_AUDIO
+
+/*General sources*/
+
+SOURCEPATH 		src
+
+SOURCE     		vectorbuffer.cpp
+SOURCE			sdlappsrv.cpp
+SOURCE			sdlenv.cpp
+SOURCE        	dsa.cpp 
+SOURCE			streamplayer.cpp
+SOURCE			sdlenvutils.cpp
+
+
+// *** General sources
+
+SOURCEPATH      ../src
+
+SOURCE          SDL.c
+SOURCE          SDL_error.c
+SOURCE          SDL_fatal.c
+
+
+// *** main
+SOURCE			main\symbian\SDL_libutils.cpp 
+SOURCE			main\symbian\SDL_main.cpp 
+
+// *** cpuinfo sources
+SOURCE  cpuinfo\SDL_cpuinfo.c
+
+// *** Video sources
+
+SOURCE          video\SDL_blit.c
+SOURCE          video\SDL_blit_0.c
+SOURCE          video\SDL_blit_1.c
+SOURCE          video\SDL_blit_A.c
+SOURCE          video\SDL_blit_N.c
+SOURCE          video\SDL_bmp.c
+SOURCE          video\SDL_cursor.c
+SOURCE          video\SDL_gamma.c
+SOURCE          video\SDL_pixels.c
+SOURCE          video\SDL_RLEaccel.c
+SOURCE          video\SDL_stretch.c
+SOURCE          video\SDL_surface.c
+SOURCE          video\SDL_video.c
+SOURCE          video\SDL_yuv.c
+SOURCE          video\SDL_yuv_mmx.c
+SOURCE          video\SDL_yuv_sw.c
+SOURCE          video\symbian\SDL_epocvideo.cpp
+SOURCE          video\symbian\SDL_epocevents.cpp 
+
+
+  
+
+// *** Audio sources
+SOURCE		audio\SDL_audio.c
+SOURCE		audio\SDL_audiocvt.c
+SOURCE		audio\SDL_audiodev.c
+//SOURCE		audio\SDL_audiomem.c
+SOURCE		audio\SDL_mixer.c
+SOURCE		audio\SDL_wave.c
+SOURCE		audio\symbian\SDL_epocaudio.cpp
+
+
+// *** Endian sources
+
+//SOURCE          endian\SDL_endian.c
+
+// *** Thread sources
+
+SOURCE          thread\SDL_thread.c
+SOURCE          thread\generic\SDL_syscond.c
+SOURCE          thread\symbian\SDL_sysmutex.cpp
+SOURCE          thread\symbian\SDL_syssem.cpp
+SOURCE          thread\symbian\SDL_systhread.cpp
+
+// *** Events sources
+
+SOURCE          events\SDL_active.c
+SOURCE          events\SDL_events.c
+SOURCE          events\SDL_keyboard.c
+SOURCE          events\SDL_mouse.c
+SOURCE          events\SDL_quit.c
+SOURCE          events\SDL_resize.c
+
+// *** Timer sources
+
+SOURCE          timer\SDL_timer.c
+SOURCE          timer\symbian\SDL_systimer.cpp
+
+// *** File sources
+
+SOURCE          file\SDL_rwops.c
+
+//*** Stdlib
+
+SOURCE			stdlib\SDL_string.c
+SOURCE			stdlib\SDL_getenv.c
+
+
+// *** Include paths
+
+SYSTEMINCLUDE 	\epoc32\include inc \epoc32\include\SDL
+SYSTEMINCLUDE   \epoc32\include\gles \epoc32\include\EGL
+SYSTEMINCLUDE	\epoc32\include\mw
+SYSTEMINCLUDE 	\epoc32\include\middleware
+SYSTEMINCLUDE	\epoc32\include\osextensions
+SYSTEMINCLUDE   \epoc32\include\app
+SYSTEMINCLUDE   \epoc32\include\platform
+SYSTEMINCLUDE   \epoc32\include\platform\app
+SYSTEMINCLUDE   \epoc32\include\platform\mw
+#ifdef OPENC
+SYSTEMINCLUDE   \epoc32\include\stdapis
+#else
+SYSTEMINCLUDE   \epoc32\include\libc
+#endif
+
+USERINCLUDE     ..\include ..\src ..\src\video  ..\src\events
+USERINCLUDE		..\src\audio ..\src\audio\symbian
+USERINCLUDE     ..\src\main\symbian ..\src\video\symbian
+USERINCLUDE     ..\src\thread ..\src\thread\generic ..\src\thread\symbian
+USERINCLUDE     ..\src\timer ..\src\joystick \epoc32\include\SDL
+
+
+
+USERINCLUDE     .\inc  .\inc\internal
+
+
+
+// *** Libraries
+
+LIBRARY        euser.lib fbscli.lib ws32.LIB  gdi.lib
+LIBRARY        mediaclientaudiostream.lib
+
+LIBRARY        avkon.lib efsrv.lib bafl.lib apparc.lib
+LIBRARY        eikcore.lib cone.lib bitgdi.lib scdv.lib
+
+LIBRARY		   hal.lib remconinterfacebase.lib remconcoreapi.lib
+
+
+#ifdef DEBUG_TRACE_ENABLED
+LIBRARY        flogger.lib
+#endif
+
+#ifdef OPENC
+LIBRARY   libc.lib
+LIBRARY	  libm.lib
+#else
+LIBRARY 	estlib.lib 
+#endif
+
+OPTION_REPLACE ARMCC --cpu ARM926EJ-S -O3 -Otime 
+ALWAYS_BUILD_AS_ARM
+
+
+DEBUGGABLE_UDEBONLY
+PAGED

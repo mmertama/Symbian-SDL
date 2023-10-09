@@ -1,0 +1,20 @@
+error 1: k k 
+ 
+->
+"1"->""
+error 2: kissa kissa
+ 
+->
+"1"->""
+error 3: kissa ss
+ 
+->
+"1"->""
+error 4: kissa pp
+ 
+->
+"1"->""
+error 5: ss kissa
+ 
+->
+"1"->""

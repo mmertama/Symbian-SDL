@@ -1,0 +1,11 @@
+@echo off
+pushd %1
+del /s symbian\.* 
+rem del /s symbian\abld.bat 
+attrib +r symbian\install\*.sisx
+del /s symbian\*.sis 
+attrib -r symbian\install\*.sisx
+del /q symbian\test\test\*.* 
+rd symbian\test\test
+del symbian\test\*.sisx 
+popd 

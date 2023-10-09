@@ -1,0 +1,37 @@
+EXPORTS
+	??0TFileUtils@@QAE@AAVRFs@@@Z @ 1 NONAME ; TFileUtils::TFileUtils(class RFs &)
+	??0TStreamUtils@@QAE@AAVCDictionaryStore@@@Z @ 2 NONAME ; TStreamUtils::TStreamUtils(class CDictionaryStore &)
+	??1CFileLineReader@@UAE@XZ @ 3 NONAME ; CFileLineReader::~CFileLineReader(void)
+	??1CFileUtils@@UAE@XZ @ 4 NONAME ; CFileUtils::~CFileUtils(void)
+	??1CRegExp@@UAE@XZ @ 5 NONAME ; CRegExp::~CRegExp(void)
+	??1CRegExpBuf@@UAE@XZ @ 6 NONAME ; CRegExpBuf::~CRegExpBuf(void)
+	?Check@CRegExp@@SAHABVTDesC16@@@Z @ 7 NONAME ; int CRegExp::Check(class TDesC16 const &)
+	?Current@CFileLineReader@@QBE?AVTPtrC16@@XZ @ 8 NONAME ; class TPtrC16 CFileLineReader::Current(void) const
+	?Exists@TFileUtils@@QBEHH@Z @ 9 NONAME ; int TFileUtils::Exists(int) const
+	?FindFileL@TFileUtils@@QBEHABVTDesC16@@AAVTDes16@@H@Z @ 10 NONAME ; int TFileUtils::FindFileL(class TDesC16 const &, class TDes16 &, int) const
+	?FindFilesL@CFileUtils@@QAEXABVCDesC16Array@@@Z @ 11 NONAME ; void CFileUtils::FindFilesL(class CDesC16Array const &)
+	?IsFileInDir@TFileUtils@@QBEHABVTDesC16@@0PAVTDes16@@@Z @ 12 NONAME ; int TFileUtils::IsFileInDir(class TDesC16 const &, class TDesC16 const &, class TDes16 *) const
+	?Last@CRegExp@@QBE?AVTPtrC16@@AAH@Z @ 13 NONAME ; class TPtrC16 CRegExp::Last(int &) const
+	?Match@CRegExp@@QAEHABVTDesC16@@@Z @ 14 NONAME ; int CRegExp::Match(class TDesC16 const &)
+	?Matched@CRegExp@@QBE?AVTPtrC16@@W4TMatchString@1@@Z @ 15 NONAME ; class TPtrC16 CRegExp::Matched(enum CRegExp::TMatchString) const
+	?NewL@CFileLineReader@@SAPAV1@AAVRFs@@ABVTDesC16@@@Z @ 16 NONAME ; class CFileLineReader * CFileLineReader::NewL(class RFs &, class TDesC16 const &)
+	?NewL@CFileUtils@@SAPAV1@AAVRFs@@AAVMFileObserver@@@Z @ 17 NONAME ; class CFileUtils * CFileUtils::NewL(class RFs &, class MFileObserver &)
+	?NewL@CRegExp@@SAPAV1@ABVTDesC16@@H@Z @ 18 NONAME ; class CRegExp * CRegExp::NewL(class TDesC16 const &, int)
+	?NewL@CRegExpBuf@@SAPAVCRegExp@@ABVTDesC16@@H@Z @ 19 NONAME ; class CRegExp * CRegExpBuf::NewL(class TDesC16 const &, int)
+	?NewLC@CFileLineReader@@SAPAV1@AAVRFs@@ABVTDesC16@@@Z @ 20 NONAME ; class CFileLineReader * CFileLineReader::NewLC(class RFs &, class TDesC16 const &)
+	?NewLC@CRegExp@@SAPAV1@ABVTDesC16@@H@Z @ 21 NONAME ; class CRegExp * CRegExp::NewLC(class TDesC16 const &, int)
+	?NewLC@CRegExpBuf@@SAPAVCRegExp@@ABVTDesC16@@H@Z @ 22 NONAME ; class CRegExp * CRegExpBuf::NewLC(class TDesC16 const &, int)
+	?NextL@CFileLineReader@@QAEHXZ @ 23 NONAME ; int CFileLineReader::NextL(void)
+	?ReadFromStoreL@TStreamUtils@@QAEXAAVTDes16@@ABVTUid@@@Z @ 24 NONAME ; void TStreamUtils::ReadFromStoreL(class TDes16 &, class TUid const &)
+	?ReadFromStoreL@TStreamUtils@@QAEXAAVTDes8@@ABVTUid@@@Z @ 25 NONAME ; void TStreamUtils::ReadFromStoreL(class TDes8 &, class TUid const &)
+	?Remove@TStreamUtils@@QAEXABVTUid@@@Z @ 26 NONAME ; void TStreamUtils::Remove(class TUid const &)
+	?SetObserver@TFileUtils@@QAEXAAVMFileObserver@@@Z @ 27 NONAME ; void TFileUtils::SetObserver(class MFileObserver &)
+	?SubCount@CRegExp@@QBEHXZ @ 28 NONAME ; int CRegExp::SubCount(void) const
+	?SubStr@CRegExp@@QBE?AVTPtrC16@@HAAH@Z @ 29 NONAME ; class TPtrC16 CRegExp::SubStr(int, int &) const
+	?SubstituteL@CRegExp@@QAEHAAPAVHBufC16@@ABVTDesC16@@@Z @ 30 NONAME ; int CRegExp::SubstituteL(class HBufC16 * &, class TDesC16 const &)
+	?WriteToStoreL@TStreamUtils@@QAEXABVTDesC16@@ABVTUid@@@Z @ 31 NONAME ; void TStreamUtils::WriteToStoreL(class TDesC16 const &, class TUid const &)
+	?WriteToStoreL@TStreamUtils@@QAEXABVTDesC8@@ABVTUid@@@Z @ 32 NONAME ; void TStreamUtils::WriteToStoreL(class TDesC8 const &, class TUid const &)
+	?DuplicateL@CFileLineReader@@SAPAV1@AAVRFile@@@Z @ 33 NONAME ; class CFileLineReader * CFileLineReader::DuplicateL(class RFile &)
+	?DuplicateLC@CFileLineReader@@SAPAV1@AAVRFile@@@Z @ 34 NONAME ; class CFileLineReader * CFileLineReader::DuplicateLC(class RFile &)
+	?SetRootL@CFileUtils@@QAEXABVTDesC16@@@Z @ 35 NONAME ; void CFileUtils::SetRootL(class TDesC16 const &)
+

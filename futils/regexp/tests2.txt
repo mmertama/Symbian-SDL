@@ -1,0 +1,8 @@
+mo[^s]se motsepotsi
+mo[^s]*se mossepotsi
+[4]{5,7} 4444
+^kissa onkissa
+^kissa "kissa on kotona"
+
+
+

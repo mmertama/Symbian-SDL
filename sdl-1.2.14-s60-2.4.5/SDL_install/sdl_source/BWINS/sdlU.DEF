@@ -1,0 +1,212 @@
+EXPORTS
+	??0CSDL@@IAE@XZ @ 1 NONAME ; CSDL::CSDL(void)
+	??0TMainFunc@@QAE@P6AHHQAPAD0@Z@Z @ 2 NONAME ; TMainFunc::TMainFunc(int (*)(int, char * * const, char * * const))
+	??0TMainFunc@@QAE@P6AHHQAPAD@Z@Z @ 3 NONAME ; TMainFunc::TMainFunc(int (*)(int, char * * const))
+	??0TMainFunc@@QAE@P6AHXZ@Z @ 4 NONAME ; TMainFunc::TMainFunc(int (*)(void))
+	??0TMainFunc@@QAE@P6AXHQAPAD0@Z@Z @ 5 NONAME ; TMainFunc::TMainFunc(void (*)(int, char * * const, char * * const))
+	??0TMainFunc@@QAE@P6AXHQAPAD@Z@Z @ 6 NONAME ; TMainFunc::TMainFunc(void (*)(int, char * * const))
+	??0TMainFunc@@QAE@P6AXXZ@Z @ 7 NONAME ; TMainFunc::TMainFunc(void (*)(void))
+	??1CSDL@@UAE@XZ @ 8 NONAME ; CSDL::~CSDL(void)
+	?AppendWsEvent@CSDL@@QAEHABVTWsEvent@@@Z @ 9 NONAME ; int CSDL::AppendWsEvent(class TWsEvent const &)
+	?CallMainL@CSDL@@QAE?AVTThreadId@@ABVTMainFunc@@PAVTRequestStatus@@PBVCDesC8Array@@HH@Z @ 10 NONAME ; class TThreadId CSDL::CallMainL(class TMainFunc const &, class TRequestStatus *, class CDesC8Array const *, int, int)
+	?DisableKeyBlocking@CSDL@@QBEXAAVCAknAppUi@@@Z @ 11 NONAME ; void CSDL::DisableKeyBlocking(class CAknAppUi &) const
+	?GetSDLCode@CSDL@@QAEHH@Z @ 12 NONAME ; int CSDL::GetSDLCode(int)
+	?NewL@CSDL@@SAPAV1@H@Z @ 13 NONAME ; class CSDL * CSDL::NewL(int)
+	?ResetSDLCodes@CSDL@@QAEXXZ @ 14 NONAME ; void CSDL::ResetSDLCodes(void)
+	?Resume@CSDL@@QAEXXZ @ 15 NONAME ; void CSDL::Resume(void)
+	?SDLCodesCount@CSDL@@QBEHXZ @ 16 NONAME ; int CSDL::SDLCodesCount(void) const
+	?SDLPanic@CSDL@@QAEXABVTDesC16@@H@Z @ 17 NONAME ; void CSDL::SDLPanic(class TDesC16 const &, int)
+	?SetContainerWindowL@CSDL@@QAEXAAVRWindow@@AAVRWsSession@@AAVCWsScreenDevice@@@Z @ 18 NONAME ; void CSDL::SetContainerWindowL(class RWindow &, class RWsSession &, class CWsScreenDevice &)
+	?SetObserver@CSDL@@QAEXPAVMSDLObserver@@@Z @ 19 NONAME ; void CSDL::SetObserver(class MSDLObserver *)
+	?SetOrientation@CSDL@@QAEXW4TOrientationMode@1@@Z @ 20 NONAME ; void CSDL::SetOrientation(enum CSDL::TOrientationMode)
+	?SetSDLCode@CSDL@@QAEHHH@Z @ 21 NONAME ; int CSDL::SetSDLCode(int, int)
+	?Suspend@CSDL@@QAEXXZ @ 22 NONAME ; void CSDL::Suspend(void)
+	SDL_AddTimer @ 23 NONAME
+	SDL_AllocRW @ 24 NONAME
+	SDL_AudioDriverName @ 25 NONAME
+	SDL_AudioInit @ 26 NONAME
+	SDL_AudioQuit @ 27 NONAME
+	SDL_BuildAudioCVT @ 28 NONAME
+	SDL_ClearError @ 29 NONAME
+	SDL_CloseAudio @ 30 NONAME
+	SDL_CondBroadcast @ 31 NONAME
+	SDL_CondSignal @ 32 NONAME
+	SDL_CondWait @ 33 NONAME
+	SDL_CondWaitTimeout @ 34 NONAME
+	SDL_ConvertAudio @ 35 NONAME
+	SDL_ConvertSurface @ 36 NONAME
+	SDL_CreateCond @ 37 NONAME
+	SDL_CreateCursor @ 38 NONAME
+	SDL_CreateMutex @ 39 NONAME
+	SDL_CreateRGBSurface @ 40 NONAME
+	SDL_CreateRGBSurfaceFrom @ 41 NONAME
+	SDL_CreateSemaphore @ 42 NONAME
+	SDL_CreateThread @ 43 NONAME
+	SDL_CreateYUVOverlay @ 44 NONAME
+	SDL_Delay @ 45 NONAME
+	SDL_DestroyCond @ 46 NONAME
+	SDL_DestroyMutex @ 47 NONAME
+	SDL_DestroySemaphore @ 48 NONAME
+	SDL_DisplayFormat @ 49 NONAME
+	SDL_DisplayFormatAlpha @ 50 NONAME
+	SDL_DisplayYUVOverlay @ 51 NONAME
+	SDL_EnableKeyRepeat @ 52 NONAME
+	SDL_EnableUNICODE @ 53 NONAME
+	SDL_Error @ 54 NONAME
+	SDL_EventState @ 55 NONAME
+	SDL_FillRect @ 56 NONAME
+	SDL_Flip @ 57 NONAME
+	SDL_FreeCursor @ 58 NONAME
+	SDL_FreeRW @ 59 NONAME
+	SDL_FreeSurface @ 60 NONAME
+	SDL_FreeWAV @ 61 NONAME
+	SDL_FreeYUVOverlay @ 62 NONAME
+	SDL_GL_GetAttribute @ 63 NONAME
+	SDL_GL_GetProcAddress @ 64 NONAME
+	SDL_GL_LoadLibrary @ 65 NONAME
+	SDL_GL_Lock @ 66 NONAME
+	SDL_GL_SetAttribute @ 67 NONAME
+	SDL_GL_SwapBuffers @ 68 NONAME
+	SDL_GL_Unlock @ 69 NONAME
+	SDL_GL_UpdateRects @ 70 NONAME
+	SDL_GetAppState @ 71 NONAME
+	SDL_GetAudioStatus @ 72 NONAME
+	SDL_GetClipRect @ 73 NONAME
+	SDL_GetCursor @ 74 NONAME
+	SDL_GetError @ 75 NONAME
+	SDL_GetEventFilter @ 76 NONAME
+	SDL_GetGammaRamp @ 77 NONAME
+	SDL_GetKeyName @ 78 NONAME
+	SDL_GetKeyState @ 79 NONAME
+	SDL_GetModState @ 80 NONAME
+	SDL_GetMouseState @ 81 NONAME
+	SDL_GetRGB @ 82 NONAME
+	SDL_GetRGBA @ 83 NONAME
+	SDL_GetRelativeMouseState @ 84 NONAME
+	SDL_GetThreadID @ 85 NONAME
+	SDL_GetTicks @ 86 NONAME
+	SDL_GetVideoInfo @ 87 NONAME
+	SDL_GetVideoSurface @ 88 NONAME
+	SDL_GetWMInfo @ 89 NONAME
+	SDL_Init @ 90 NONAME
+	SDL_InitSubSystem @ 91 NONAME
+	SDL_KillThread @ 92 NONAME
+	SDL_Linked_Version @ 93 NONAME
+	SDL_ListModes @ 94 NONAME
+	SDL_LoadBMP_RW @ 95 NONAME
+	SDL_LoadWAV_RW @ 96 NONAME
+	SDL_LockAudio @ 97 NONAME
+	SDL_LockSurface @ 98 NONAME
+	SDL_LockYUVOverlay @ 99 NONAME
+	SDL_LowerBlit @ 100 NONAME
+	SDL_MapRGB @ 101 NONAME
+	SDL_MapRGBA @ 102 NONAME
+	SDL_MixAudio @ 103 NONAME
+	SDL_OpenAudio @ 104 NONAME
+	SDL_PauseAudio @ 105 NONAME
+	SDL_PeepEvents @ 106 NONAME
+	SDL_PollEvent @ 107 NONAME
+	SDL_PumpEvents @ 108 NONAME
+	SDL_PushEvent @ 109 NONAME
+	SDL_Quit @ 110 NONAME
+	SDL_QuitSubSystem @ 111 NONAME
+	SDL_RWFromConstMem @ 112 NONAME
+	SDL_RWFromFP @ 113 NONAME
+	SDL_RWFromFile @ 114 NONAME
+	SDL_RWFromMem @ 115 NONAME
+	SDL_ReadBE16 @ 116 NONAME
+	SDL_ReadBE32 @ 117 NONAME
+	SDL_ReadBE64 @ 118 NONAME
+	SDL_ReadLE16 @ 119 NONAME
+	SDL_ReadLE32 @ 120 NONAME
+	SDL_ReadLE64 @ 121 NONAME
+	SDL_RemoveTimer @ 122 NONAME
+	SDL_SaveBMP_RW @ 123 NONAME
+	SDL_SemPost @ 124 NONAME
+	SDL_SemTryWait @ 125 NONAME
+	SDL_SemValue @ 126 NONAME
+	SDL_SemWait @ 127 NONAME
+	SDL_SemWaitTimeout @ 128 NONAME
+	SDL_SetAlpha @ 129 NONAME
+	SDL_SetClipRect @ 130 NONAME
+	SDL_SetColorKey @ 131 NONAME
+	SDL_SetColors @ 132 NONAME
+	SDL_SetCursor @ 133 NONAME
+	SDL_SetError @ 134 NONAME
+	SDL_SetEventFilter @ 135 NONAME
+	SDL_SetGamma @ 136 NONAME
+	SDL_SetGammaRamp @ 137 NONAME
+	SDL_SetModState @ 138 NONAME
+	SDL_SetPalette @ 139 NONAME
+	SDL_SetTimer @ 140 NONAME
+	SDL_SetVideoMode @ 141 NONAME
+	SDL_ShowCursor @ 142 NONAME
+	SDL_SoftStretch @ 143 NONAME
+	SDL_ThreadID @ 144 NONAME
+	SDL_UnlockAudio @ 145 NONAME
+	SDL_UnlockSurface @ 146 NONAME
+	SDL_UnlockYUVOverlay @ 147 NONAME
+	SDL_UpdateRect @ 148 NONAME
+	SDL_UpdateRects @ 149 NONAME
+	SDL_UpperBlit @ 150 NONAME
+	SDL_VideoDriverName @ 151 NONAME
+	SDL_VideoInit @ 152 NONAME
+	SDL_VideoModeOK @ 153 NONAME
+	SDL_VideoQuit @ 154 NONAME
+	SDL_WM_GetCaption @ 155 NONAME
+	SDL_WM_GrabInput @ 156 NONAME
+	SDL_WM_IconifyWindow @ 157 NONAME
+	SDL_WM_SetCaption @ 158 NONAME
+	SDL_WM_SetIcon @ 159 NONAME
+	SDL_WM_ToggleFullScreen @ 160 NONAME
+	SDL_WaitEvent @ 161 NONAME
+	SDL_WaitThread @ 162 NONAME
+	SDL_WarpMouse @ 163 NONAME
+	SDL_WasInit @ 164 NONAME
+	SDL_WriteBE16 @ 165 NONAME
+	SDL_WriteBE32 @ 166 NONAME
+	SDL_WriteBE64 @ 167 NONAME
+	SDL_WriteLE16 @ 168 NONAME
+	SDL_WriteLE32 @ 169 NONAME
+	SDL_WriteLE64 @ 170 NONAME
+	SDL_mutexP @ 171 NONAME
+	SDL_mutexV @ 172 NONAME
+	SDL_GetKeyRepeat @ 173 NONAME
+	SDL_Has3DNow @ 174 NONAME
+	SDL_Has3DNowExt @ 175 NONAME
+	SDL_HasAltiVec @ 176 NONAME
+	SDL_HasMMX @ 177 NONAME
+	SDL_HasMMXExt @ 178 NONAME
+	SDL_HasRDTSC @ 179 NONAME
+	SDL_HasSSE @ 180 NONAME
+	SDL_HasSSE2 @ 181 NONAME
+	SDL_getenv @ 182 NONAME
+	SDL_lltoa @ 183 NONAME
+	SDL_ltoa @ 184 NONAME
+	SDL_putenv @ 185 NONAME
+	SDL_revcpy @ 186 NONAME
+	SDL_snprintf @ 187 NONAME
+	SDL_strdup @ 188 NONAME
+	SDL_strlcat @ 189 NONAME
+	SDL_strlcpy @ 190 NONAME
+	SDL_strlwr @ 191 NONAME
+	SDL_strrev @ 192 NONAME
+	SDL_strtoull @ 193 NONAME
+	SDL_ulltoa @ 194 NONAME
+	SDL_ultoa @ 195 NONAME
+	SDL_vsnprintf @ 196 NONAME
+	??0TMainFunc@@QAE@XZ @ 197 NONAME ; TMainFunc::TMainFunc(void)
+	?SetBlitter@CSDL@@QAEHPAVMBlitter@@@Z @ 198 NONAME ; int CSDL::SetBlitter(class MBlitter *)
+	?AppendOverlay@CSDL@@QAEHAAVMOverlay@@H@Z @ 199 NONAME ; int CSDL::AppendOverlay(class MOverlay &, int)
+	?RemoveOverlay@CSDL@@QAEHAAVMOverlay@@@Z @ 200 NONAME ; int CSDL::RemoveOverlay(class MOverlay &)
+	?RedrawRequest@CSDL@@QAEHXZ @ 201 NONAME ; int CSDL::RedrawRequest(void)
+	?Observer@CSDL@@QAEPAVMSDLObserver@@XZ @ 202 NONAME ; class MSDLObserver * CSDL::Observer(void)
+	SDL_strcasecmp @ 203 NONAME
+	SDL_LoadFunction @ 204 NONAME
+	SDL_LoadObject @ 205 NONAME
+	SDL_UnloadObject @ 206 NONAME
+	?Extension_@CSDL@@UAEHIAAPAXPAX@Z @ 207 NONAME ; int CSDL::Extension_(unsigned int, void * &, void *)
+	?SetAppOrientation@CSDL@@QAEXAAVCAknAppUi@@W4TAppOrientation@1@@Z @ 208 NONAME ; void CSDL::SetAppOrientation(class CAknAppUi &, enum CSDL::TAppOrientation)
+	?SuspendRequestsLC@CSDL@@QAEXH@Z @ 209 NONAME ; void CSDL::SuspendRequestsLC(int)
+	?ChangeBgColor@CSDL@@QAEXAAVTRgb@@@Z @ 210 NONAME ; void CSDL::ChangeBgColor(class TRgb &)
+

@@ -1,0 +1,94 @@
+EXPORTS
+	_ZN10CFileUtils10FindFilesLERK12CDesC16Array @ 1 NONAME
+	_ZN10CFileUtils4NewLER3RFsR13MFileObserver @ 2 NONAME
+	_ZN10CRegExpBuf4NewLERK7TDesC16i @ 3 NONAME
+	_ZN10CRegExpBuf5NewLCERK7TDesC16i @ 4 NONAME
+	_ZN10CRegExpBufD0Ev @ 5 NONAME
+	_ZN10CRegExpBufD1Ev @ 6 NONAME
+	_ZN10CRegExpBufD2Ev @ 7 NONAME
+	_ZN10TFileUtils11SetObserverER13MFileObserver @ 8 NONAME
+	_ZN10TFileUtilsC1ER3RFs @ 9 NONAME
+	_ZN10TFileUtilsC2ER3RFs @ 10 NONAME
+	_ZN12TStreamUtils13WriteToStoreLERK6TDesC8RK4TUid @ 11 NONAME
+	_ZN12TStreamUtils13WriteToStoreLERK7TDesC16RK4TUid @ 12 NONAME
+	_ZN12TStreamUtils14ReadFromStoreLER5TDes8RK4TUid @ 13 NONAME
+	_ZN12TStreamUtils14ReadFromStoreLER6TDes16RK4TUid @ 14 NONAME
+	_ZN12TStreamUtils6RemoveERK4TUid @ 15 NONAME
+	_ZN12TStreamUtilsC1ER16CDictionaryStore @ 16 NONAME
+	_ZN12TStreamUtilsC2ER16CDictionaryStore @ 17 NONAME
+	_ZN15CFileLineReader10DuplicateLER5RFile @ 18 NONAME
+	_ZN15CFileLineReader11DuplicateLCER5RFile @ 19 NONAME
+	_ZN15CFileLineReader4NewLER3RFsRK7TDesC16 @ 20 NONAME
+	_ZN15CFileLineReader5NewLCER3RFsRK7TDesC16 @ 21 NONAME
+	_ZN15CFileLineReader5NextLEv @ 22 NONAME
+	_ZN15CFileLineReaderD0Ev @ 23 NONAME
+	_ZN15CFileLineReaderD1Ev @ 24 NONAME
+	_ZN15CFileLineReaderD2Ev @ 25 NONAME
+	_ZN7CRegExp11SubstituteLERP7HBufC16RK7TDesC16 @ 26 NONAME
+	_ZN7CRegExp4NewLERK7TDesC16i @ 27 NONAME
+	_ZN7CRegExp5CheckERK7TDesC16 @ 28 NONAME
+	_ZN7CRegExp5MatchERK7TDesC16 @ 29 NONAME
+	_ZN7CRegExp5NewLCERK7TDesC16i @ 30 NONAME
+	_ZN7CRegExpD0Ev @ 31 NONAME
+	_ZN7CRegExpD1Ev @ 32 NONAME
+	_ZN7CRegExpD2Ev @ 33 NONAME
+	_ZNK10TFileUtils11IsFileInDirERK7TDesC16S2_P6TDes16 @ 34 NONAME
+	_ZNK10TFileUtils6ExistsEi @ 35 NONAME
+	_ZNK10TFileUtils9FindFileLERK7TDesC16R6TDes16i @ 36 NONAME
+	_ZNK15CFileLineReader7CurrentEv @ 37 NONAME
+	_ZNK7CRegExp4LastERi @ 38 NONAME
+	_ZNK7CRegExp6SubStrEiRi @ 39 NONAME
+	_ZNK7CRegExp7MatchedENS_12TMatchStringE @ 40 NONAME
+	_ZNK7CRegExp8SubCountEv @ 41 NONAME
+	_ZTI10CFileUtils @ 42 NONAME ; #<TI>#
+	_ZTI10CRegExpBuf @ 43 NONAME ; #<TI>#
+	_ZTI12CPatTokenAlt @ 44 NONAME ; #<TI>#
+	_ZTI12TMatchFinder @ 45 NONAME ; #<TI>#
+	_ZTI13CPatTokenBase @ 46 NONAME ; #<TI>#
+	_ZTI13CPatTokenChar @ 47 NONAME ; #<TI>#
+	_ZTI13CPatTokenWord @ 48 NONAME ; #<TI>#
+	_ZTI14CPatTokenGroup @ 49 NONAME ; #<TI>#
+	_ZTI14CPatTokenRange @ 50 NONAME ; #<TI>#
+	_ZTI14TCompareFinder @ 51 NONAME ; #<TI>#
+	_ZTI15CFileLineReader @ 52 NONAME ; #<TI>#
+	_ZTI15CPatTokenRepeat @ 53 NONAME ; #<TI>#
+	_ZTI15CPatTokenStatic @ 54 NONAME ; #<TI>#
+	_ZTI16CPatTokenLineEnd @ 55 NONAME ; #<TI>#
+	_ZTI16CPatTokenNonChar @ 56 NONAME ; #<TI>#
+	_ZTI16CPatTokenNonWord @ 57 NONAME ; #<TI>#
+	_ZTI17CPatTokenGroupAnd @ 58 NONAME ; #<TI>#
+	_ZTI18CPatTokenLineBegin @ 59 NONAME ; #<TI>#
+	_ZTI18CPatTokenReference @ 60 NONAME ; #<TI>#
+	_ZTI18CPatTokenWordBreak @ 61 NONAME ; #<TI>#
+	_ZTI19CPatTokenNonDecimal @ 62 NONAME ; #<TI>#
+	_ZTI19CPatTokenWhiteSpace @ 63 NONAME ; #<TI>#
+	_ZTI21CPatTokenNonWordBreak @ 64 NONAME ; #<TI>#
+	_ZTI22CPatTokenNonWhiteSpace @ 65 NONAME ; #<TI>#
+	_ZTI7CRegExp @ 66 NONAME ; #<TI>#
+	_ZTV10CFileUtils @ 67 NONAME ; #<VT>#
+	_ZTV10CRegExpBuf @ 68 NONAME ; #<VT>#
+	_ZTV12CPatTokenAlt @ 69 NONAME ; #<VT>#
+	_ZTV12TMatchFinder @ 70 NONAME ; #<VT>#
+	_ZTV13CPatTokenBase @ 71 NONAME ; #<VT>#
+	_ZTV13CPatTokenChar @ 72 NONAME ; #<VT>#
+	_ZTV13CPatTokenWord @ 73 NONAME ; #<VT>#
+	_ZTV14CPatTokenGroup @ 74 NONAME ; #<VT>#
+	_ZTV14CPatTokenRange @ 75 NONAME ; #<VT>#
+	_ZTV14TCompareFinder @ 76 NONAME ; #<VT>#
+	_ZTV15CFileLineReader @ 77 NONAME ; #<VT>#
+	_ZTV15CPatTokenRepeat @ 78 NONAME ; #<VT>#
+	_ZTV15CPatTokenStatic @ 79 NONAME ; #<VT>#
+	_ZTV16CPatTokenLineEnd @ 80 NONAME ; #<VT>#
+	_ZTV16CPatTokenNonChar @ 81 NONAME ; #<VT>#
+	_ZTV16CPatTokenNonWord @ 82 NONAME ; #<VT>#
+	_ZTV17CPatTokenGroupAnd @ 83 NONAME ; #<VT>#
+	_ZTV18CPatTokenLineBegin @ 84 NONAME ; #<VT>#
+	_ZTV18CPatTokenReference @ 85 NONAME ; #<VT>#
+	_ZTV18CPatTokenWordBreak @ 86 NONAME ; #<VT>#
+	_ZTV19CPatTokenNonDecimal @ 87 NONAME ; #<VT>#
+	_ZTV19CPatTokenWhiteSpace @ 88 NONAME ; #<VT>#
+	_ZTV21CPatTokenNonWordBreak @ 89 NONAME ; #<VT>#
+	_ZTV22CPatTokenNonWhiteSpace @ 90 NONAME ; #<VT>#
+	_ZTV7CRegExp @ 91 NONAME ; #<VT>#
+	_ZN10CFileUtils8SetRootLERK7TDesC16 @ 92 NONAME
+

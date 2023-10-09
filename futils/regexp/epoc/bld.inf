@@ -1,0 +1,15 @@
+PRJ_PLATFORMS
+// list platforms your project supports here
+// default = WINS MARM
+WINS ARM4 ARMI THUMB
+
+PRJ_EXPORTS
+// list each file exported from source on a separate line
+// {<destination>} defaults to \EPOC32\Include\<source file>
+\epoclib\regexp\regexp.h
+
+
+PRJ_MMPFILES
+\epoclib\regexp\epoc\regexp.mmp
+
+

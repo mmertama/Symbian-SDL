@@ -1,0 +1,76 @@
+// *** EPOC MMP  FILE FOR SDLexe.dll
+
+// *** Definitions
+
+TARGET              sdlexe.dll
+TARGETTYPE          dll 
+CAPABILITY 	    	ReadUserData WriteUserData LocalServices NetworkServices
+UID             	0x1000008d 0xF01F605E
+
+DEFFILE sdlexe.def
+
+// *** defines
+
+#include "sdl_linkage.h"
+
+EPOCALLOWDLLDATA
+
+
+// *** General sources
+
+SOURCEPATH			src
+SOURCE 				sdlexe.cpp 
+SOURCE				drawbitmapfilter.cpp
+SOURCE				virtualcursor.cpp
+SOURCE				zoomer.cpp
+SOURCE				fpsview.cpp
+
+
+SOURCEPATH		 .\src
+START RESOURCE sdlexe.rss
+HEADER
+TARGETPATH \resource\apps
+END
+
+
+
+// *** Include paths
+
+SYSTEMINCLUDE   \epoc32\include inc
+SYSTEMINCLUDE		\epoc32\include\mw
+SYSTEMINCLUDE 	\epoc32\include\middleware
+SYSTEMINCLUDE		\epoc32\include\osextensions
+SYSTEMINCLUDE		\epoc32\include\domain\middleware
+SYSTEMINCLUDE    \epoc32\include\app
+SYSTEMINCLUDE    \epoc32\include\platform
+SYSTEMINCLUDE    \epoc32\include\platform\app
+SYSTEMINCLUDE    \epoc32\include\platform\mw
+
+USERINCLUDE      ..\src\main\symbian .\inc\internal
+
+// *** Libraries
+
+
+LIBRARY        euser.lib sdl.lib
+
+LIBRARY			efsrv.lib cone.lib eikcoctl.lib avkon.lib eikdlg.lib apparc.lib eikctl.lib
+LIBRARY      	eikcore.lib aknnotify.lib bafl.lib apgrfx.lib ws32.lib fbscli.lib
+LIBRARY bitgdi.lib
+LIBRARY egul.lib
+LIBRARY gdi.lib
+
+#ifdef SYMBIAN3
+MACRO OPENVGSUPPORT
+LIBRARY libgles_cm.lib
+LIBRARY libopenvg.lib
+LIBRARY libegl.lib
+#endif
+
+
+
+
+
+
+
+
+

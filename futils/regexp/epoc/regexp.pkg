@@ -1,0 +1,3 @@
+#{"Regular Expression Library"},(0x10000B30),0,0,0,TYPE=SY
+;files
+"\epoc32\release\thumb\urel\regexp.dll"-"!:\System\Libs\regexp.dll"

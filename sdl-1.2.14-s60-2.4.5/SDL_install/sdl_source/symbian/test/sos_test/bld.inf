@@ -1,0 +1,8 @@
+PRJ_PLATFORMS
+DEFAULT
+
+PRJ_EXPORTS
+ball.bmp  \Epoc32\winscw\c\private\E000A7A0\ball.bmp
+
+PRJ_MMPFILES
+sdltest.mmp

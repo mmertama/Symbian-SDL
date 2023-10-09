@@ -1,0 +1,43 @@
+
+#include "sdl_linkage.h"
+
+TARGET sos_test2.exe
+TARGETTYPE exe
+UID 0 0xe0401001
+CAPABILITY ReadUserData WriteUserData
+EPOCHEAPSIZE 1000000 20000000
+
+USERINCLUDE .
+SYSTEMINCLUDE \epoc32\include  +\include\sdl
+
+#ifdef OPENC
+SYSTEMINCLUDE   \epoc32\include\stdapis
+#else
+SYSTEMINCLUDE \epoc32\include\libc
+#endif
+
+SYSTEMINCLUDE		\epoc32\include\platform
+SYSTEMINCLUDE		\epoc32\include\platform\mw
+SYSTEMINCLUDE		\epoc32\include\platform\app
+SYSTEMINCLUDE		\epoc32\include\mw
+
+SOURCEPATH .
+SOURCE sos_test2.cpp
+SOURCE sos_test2_s60.cpp
+
+SOURCEPATH .
+START RESOURCE sos_test2_reg.rss
+TARGETPATH \private\10003a3f\apps
+END
+
+LIBRARY euser.lib
+LIBRARY sdl.lib
+LIBRARY sdlexe.lib
+#ifdef OPENC
+LIBRARY   libc.lib
+LIBRARY	  libm.lib
+#else
+LIBRARY 	estlib.lib 
+#endif
+
+

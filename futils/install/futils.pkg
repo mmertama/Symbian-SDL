@@ -1,0 +1,22 @@
+;
+; C2Doom core installation file
+;
+
+; No languages - English by default
+;
+
+;Languages
+&EN
+;Header
+
+#{"Futils"},(0xF01f3d6c),1,0,0,TYPE=SISAPP
+
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+%{"Mertama-EN"} : "Mertama"
+
+*"\certificates\selfsigned.key", "\certificates\selfsigned.cer"
+
+;  files
+"..\..\epoc32\release\armv5\urel\futils.dll"-"!:\sys\bin\futils.dll"
+

@@ -1,0 +1,32 @@
+; Installation file for Snapper application
+;
+; This is an auto-generated PKG file by Carbide.
+; This file uses variables specific to Carbide builds that will not work
+; on command-line builds. If you want to use this generated PKG file from the
+; command-line tools you will need to modify the variables with the appropriate
+; values: $(EPOCROOT), $(PLATFORM), $(TARGET)
+;
+;Language - standard language definitions
+&EN
+
+; standard SIS file header
+#{"sdltest"},(0xE000A7A0),1,0,0
+
+;Localised Vendor name
+%{"Vendor-EN"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Supports Series 60 v 3.0
+[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+*"\certificates\selfsigned.key", "\certificates\selfsigned.cer"
+
+;Files to install
+;You should change the source paths to match that of your environment
+;<source> <destination>
+"..\..\..\..\..\Epoc32\release\gcce\urel\sdltest.exe"		-"!:\sys\bin\sdltest.exe"
+"..\..\..\..\..\Epoc32\data\z\resource\apps\sdltest.rsc"		-"!:\resource\apps\sdltest.rsc"
+"..\..\..\..\..\Epoc32\data\z\private\10003a3f\apps\sdltest_reg.rsc"	-"!:\private\10003a3f\import\apps\sdltest_reg.rsc"
+"..\..\..\..\..\Epoc32\winscw\c\private\E000A7A0\ball.bmp"	-"c:\private\E000A7A0\ball.bmp"

@@ -1,0 +1,47 @@
+;    SDL SPACE INVADERS - The Game
+;    Copyright (C) 2009  Markus Mertama
+;
+;    This program is free software: you can redistribute it and/or modify
+;    it under the terms of the GNU General Public License as published by
+;    the Free Software Foundation, either version 3 of the License, or
+;    (at your option) any later version.
+;
+;    This program is distributed in the hope that it will be useful,
+;    but WITHOUT ANY WARRANTY; without even the implied warranty of
+;    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;    GNU General Public License for more details.
+;
+;    You should have received a copy of the GNU General Public License
+;    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+;
+;
+;
+;
+; sinvander file that defines modifialble resources
+;
+
+i,enemy1,enemy1,15,4            ;after ';' there are comments, each line has to end with ';' 
+i,enemy2,enemy2,8,4             ;first parameter is type  'i', 'm', 'a' or 'd'for image, mask, audio or just random data
+i,enemy3,enemy3,7,4             ;second is name of the property
+i,tankmissile1,tankmissile1     ;third is name of the file 
+i,explosion1,explosion1,1,5     ;file is a bmp file - but without .bmp extension
+i,tank1,tank1                   ;if screen size is less than 400px then _small.bmp
+i,ufo1,ufo1,5,4                 ;is used instead of just .bmp
+m,boom1,boom1                   ;_mask.bmp and _mask_small.bmp respectively holds 8-bit mask
+d,datafolder,data               ;d, 'datafolder'folder where files are found 
+i,shield1,shield1               ;m-type  file just refers to 8-bit mask
+i,enemymissile1,enemymissile1   ;audiofile is wav PCM 22050 16bit signed mono 
+i,numbers,numbers               ;spaces are ignored 
+i,gameover,gameover             ; Markus Mertama 2009
+i,welcome,welcome;
+a,welcomegame,welcome;
+a,tankshoot,tankshoot;
+a,shieldexplosion,shieldexplosion;
+a,tankexplosion,tankexplosion;
+a,enemyexplosion,enemyexplosion;
+a,ufoexplosion,tankexplosion;
+a,enemymove,enemymove;
+a,ufomove,ufomove;
+a,gameisover,gameover;
+
+ 

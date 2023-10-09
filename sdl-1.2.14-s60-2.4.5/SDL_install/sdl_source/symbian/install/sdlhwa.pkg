@@ -1,0 +1,22 @@
+;
+; SDL installation file
+;
+
+; No languages - English by default
+;
+
+;Languages
+&EN
+;Header
+
+#{"SDL HWA Support"},(0xF01F3D69),1,0,0,TYPE=PARTIALUPGRADE
+
+;[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+%{"SDL-EN"} : "SDL"
+
+*"\certificates\selfsigned.key", "\certificates\selfsigned.cer"
+
+; files
+"..\..\..\epoc32\release\armv5\urel\sdlhwablitter.dll"-"!:\sys\bin\sdlhwablitter.dll"
+

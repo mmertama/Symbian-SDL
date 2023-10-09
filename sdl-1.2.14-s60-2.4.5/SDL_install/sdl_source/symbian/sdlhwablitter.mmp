@@ -1,0 +1,61 @@
+// *** EPOC MMP  FILE FOR sdlhwablitter.dll
+
+// *** Definitions
+
+TARGET         		sdlhwablitter.dll
+TARGETTYPE      	dll 
+CAPABILITY 	    	ReadUserData WriteUserData LocalServices NetworkServices
+UID             	0x1000008d 0xF01F3D68
+
+// *** defines
+
+#include "sdl_linkage.h"
+
+// *** General sources
+
+SOURCEPATH			src
+SOURCE 				hwablitter.cpp
+
+
+
+
+// *** Include paths
+
+SYSTEMINCLUDE   \epoc32\include inc
+SYSTEMINCLUDE		\epoc32\include\mw
+SYSTEMINCLUDE 	\epoc32\include\middleware
+SYSTEMINCLUDE		\epoc32\include\osextensions
+SYSTEMINCLUDE		\epoc32\include\domain\middleware
+SYSTEMINCLUDE    \epoc32\include\app
+SYSTEMINCLUDE    \epoc32\include\platform
+SYSTEMINCLUDE    \epoc32\include\platform\app
+SYSTEMINCLUDE    \epoc32\include\platform\mw
+
+USERINCLUDE      ..\src\main\symbian .\inc\internal
+
+// *** Libraries
+
+LIBRARY        euser.lib 
+//LIBRARY 			 sdl.lib
+
+//LIBRARY			efsrv.lib cone.lib eikcoctl.lib eikdlg.lib apparc.lib eikctl.lib
+//LIBRARY    	eikcore.lib aknnotify.lib bafl.lib apgrfx.lib ws32.lib 
+LIBRARY bitgdi.lib fbscli.lib
+LIBRARY egul.lib
+LIBRARY gdi.lib
+LIBRARY avkon.lib
+
+#ifdef SYMBIAN3
+MACRO OPENVGSUPPORT
+LIBRARY libgles_cm.lib
+LIBRARY libopenvg.lib
+LIBRARY libegl.lib
+#endif
+
+
+
+
+
+
+
+

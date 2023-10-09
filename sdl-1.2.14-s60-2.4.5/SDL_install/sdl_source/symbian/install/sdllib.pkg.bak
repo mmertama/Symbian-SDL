@@ -1,0 +1,26 @@
+;
+; SDL installation file
+;
+
+; No languages - English by default
+;
+
+;Languages
+&EN
+;Header
+
+#{"SDL Library"},(0xF01F3D69),2,4,4,TYPE=SISAPP
+
+;[0x101F7961], 0, 0, 0, {"Series60ProductID"}
+
+%{"SDL-EN"} : "SDL"
+
+*"\certificates\selfsigned.key", "\certificates\selfsigned.cer"
+
+; files
+"..\..\..\epoc32\release\armv5\urel\sdl.dll"-"!:\sys\bin\sdl.dll"
+"..\..\..\epoc32\release\armv5\urel\sdlexe.dll"-"!:\sys\bin\sdlexe.dll"
+"..\..\..\epoc32\release\armv5\urel\sdlhwablitter.dll"-"!:\sys\bin\sdlhwablitter.dll"
+"..\..\..\epoc32\data\z\resource\apps\sdlexe.rsc"-"!:\resource\apps\sdlexe.rsc"
+"..\..\..\epoc32\data\z\resource\apps\sdlexe.mbm"-"!:\resource\apps\sdlexe.mbm"
+

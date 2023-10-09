@@ -1,0 +1,26 @@
+#include<sdl_linkage.h>
+
+PRJ_PLATFORMS
+DEFAULT
+
+
+PRJ_EXPORTS
+inc\sdlepocapi.h
+inc\sdlmain.h
+inc\windows.h
+inc\gl.h \epoc32\include\GL\gl.h
+inc\glut.h \epoc32\include\GL\glut.h
+
+
+
+PRJ_MMPFILES
+gnumakefile sdl_s60.mk
+SDL.mmp
+sdlexe.mmp
+sdlmain.mmp
+#ifdef SYMBIAN3
+sdlhwablitter.mmp
+#endif
+
+
+PRJ_TESTMMPFILES

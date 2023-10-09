@@ -1,0 +1,67 @@
+// CBAAPP.RSS
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+// CbaApp app
+//
+
+NAME SDLT
+
+#include <eikon.rh>
+#include <avkon.rh>
+#include <avkon.rsg>
+//#include <avkon.hrh>
+#include <appinfo.rh>
+//#include <data_caging_paths_strings.hrh>
+#include "sdltest.hrh"
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF r_default_document_name 
+    { buf="sdltest"; }
+
+RESOURCE EIK_APP_INFO
+    {
+    menubar=r_app_menubar;
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+RESOURCE MENU_BAR r_app_menubar
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_cbaapp_file_menu; }
+        };
+    }
+
+RESOURCE MENU_PANE r_cbaapp_file_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=ETestGdi; txt="Test GDI"; },
+        MENU_ITEM { command=ETestDsa; txt="Test DSA"; },
+        MENU_ITEM { command=ETestDsbIu; txt="Test DSB IU"; },
+        MENU_ITEM { command=ETestDsbDb; txt="Test DSB DB"; },
+        MENU_ITEM { command=ETestDsbIuA; txt="Test DSB IU A"; },
+        MENU_ITEM { command=ETestDsbDbA; txt="Test DSB DB A"; },
+        MENU_ITEM { command=ETestViewBuildDate; txt="Build"; },
+        MENU_ITEM { command=EAknCmdExit; txt="Exit"; }
+        };
+    }
+
+RESOURCE LOCALISABLE_APP_INFO r_localisable_app_info
+    {
+    short_caption = "Sdl Test";
+    caption_and_icon = CAPTION_AND_ICON_INFO
+        {
+        caption = "Sdl Test";
+/*
+        number_of_icons = 2;
+        icon_file = APP_BITMAP_DIR"\\sdlApp_aif.mbm";
+*/
+        };
+    }
+
+
+// End of File

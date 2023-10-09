@@ -1,0 +1,33 @@
+
+
+TARGET 		futils.dll
+TARGETTYPE 	dll
+UID 		0x1000008d 0xF01f3d6c
+
+SOURCEPATH 	..\src
+
+SOURCE 		fileutils.cpp  
+SOURCE    linereader.cpp
+SOURCE		streamutils.cpp
+
+#ifdef EKA2
+CAPABILITY  ReadUserData WriteUserData LocalServices NetworkServices
+#endif
+
+SOURCEPATH   ..\regexp      
+
+SOURCE		regexp.cpp 
+
+#ifndef EKA2
+SOURCE      regexpdll.cpp
+#endif
+
+USERINCLUDE 	..\inc ..\regexp
+SYSTEMINCLUDE 	\epoc32\include
+
+/*New paths Symbian^3*/
+SYSTEMINCLUDE   \epoc32\include\mw  \epoc32\include\platform \epoc32\include\platform\mw
+
+LIBRARY 	euser.lib
+LIBRARY 	estor.lib
+LIBRARY 	efsrv.lib

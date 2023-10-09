@@ -1,0 +1,61 @@
+2\0x{002b} 2+3 2-
+\0x2b\d 1+2 *3 
+"(\S+\s+(r[u|o]+)*)*" "Sasa ruro Masa puro, Hassu lauma"
+"<.*>" "<HTML> kissa <H1> kasa </H1> masa" _ -g
+"<.*?>" "<HTML> kissa <H1> kasa </H1> masa" _ -g
+(.*)\.(.*) test.txt
+(.*?)\.(.*) test.txt
+\.(.*) testi.txt
+\d\d "nuo 12 poikaa ja 3 tyttöä ovat 15" monta
+\d\d "nuo 12 poikaa ja 3 tyttöä ovat 15" monta -g
+m masa k
+a masa o
+p masa o
+hippi "koira jouksee hippia takaa" kissi 
+[2-9] "14 arkulla vainaa" 5
+"kalle\s+(\d+)\s+ripa\s+(\d+)" "kalle 234 ripa 43245"
+(o)?? koo
+(o)*? koo
+(o)+? koo
+"(\d)(\d)+" 123456
+HO[0-9A-Z]ho HO_ho
+HO[0-9A-Z]ho HOOho
+HO[0-9A-Z]ho HO88ho
+HO[0-9A-Z]ho HO8hoho
+34?	4312
+34?	43412
+kissa(\B)koira kissakoira
+kissa(\B)koira "kissa koira"
+kissa(\b)koira kissakoira
+kissa(\b)koira "kissa koira"
+r(\w)r\1\1 rtrwrww
+.* nasse
+(.*) kasso
+"(\w)\spaha" "kissa on paha" 
+ki(s*)a	kissa
+n(ii)?.o niilo
+"yt(r|e|y)" ytero
+kassa$ kasassa
+kassa$ rapassakassa
+kassa$ kassa
+kassa$ kossa
+"mo[^s]se" motsepotsi
+"mo[^s]*se" mossepotsi
+[4]{5,7} 4444
+"^kissa" onkissa
+"^kissa" "kissa on kotona"
+k k 
+kissa kissa
+kissa ss
+kissa pp
+ss kissa
+[0-8]* 99999
+[0-8]+ 99999
+[o4u29]+ 3242
+[4]{4} 4444
+[4]{5} 4444
+[4]{4,} 4444
+\D+ 12
+\d+ 12
+
+

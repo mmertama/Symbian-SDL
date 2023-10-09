@@ -1,0 +1,173 @@
+use strict;
+use Cwd 'abs_path';
+
+my $fromwhere = $ARGV[0];
+
+my $dir = abs_path($fromwhere);	
+
+print "Warning!\n Your path included spaces! It is not tested and may cause errors!\n" if $dir =~ /\s/;
+
+my $findee = $ARGV[1];
+
+opendir(DIR, $dir) or die "cannot open $dir; $!\n";
+my @root = readdir(DIR);
+closedir(DIR);
+
+my $target = "";
+
+foreach my $m (@root)
+	{
+	if($m =~ /$findee/)
+		{
+		unless(length($target) == 0)
+			{
+			addit("SYMBIAN_SDL_FILES_FAIL", $target);	
+			addit("SYMBIAN_SDL_FILES_FAIL_REASON", "as this dummy scripts also thinks $m is a SDL, please rename");
+			die "Multiple matches\n"; 
+			}
+		$target = $m;
+		}
+	}
+
+if (length($target) == 0)
+	{
+	addit("SYMBIAN_SDL_FILES_FAIL", "No SDL installed");	
+	addit("SYMBIAN_SDL_FILES_FAIL_REASON", "download form www.libsdl.org");
+	die "No SDK\n"; 
+	}	
+	
+my $ddir = $dir;
+$ddir .= '/' unless $dir =~ /[\/\\]$/;
+die "No matches\n" if length($target) == 0;	
+
+
+addit("SYMBIAN_SDL_NAME", lc($target));
+	
+
+$target = dosify("$ddir$target");
+addit("SYMBIAN_SDL_HOME", $target);
+
+$dir = dosify($ddir);
+addit("SYMBIAN_SDL_ROOT", $dir);
+
+		
+if (length($ENV{"TEMP"}) == 0)
+	{
+	addit("SYMBIAN_SDL_FILES_FAIL", "Temp not set");	
+	addit("SYMBIAN_SDL_FILES_FAIL_REASON", "environment not set");
+	die "No TEMP folder found\n"; 
+	}	
+
+addit("SYMBIAN_FORTEMP", dosify(tempname($ENV{"TEMP"})));
+
+my $epocroot = $dir;
+if($epocroot =~ /^\w\:/)
+	{
+	$epocroot = substr($epocroot, 2);
+	}
+	
+$epocroot .= '\\' unless $epocroot =~ /[\/\\]$/;	
+addit("SYMBIAN_SDL_EPOCROOT", $epocroot);	
+
+#check if certains files are in place!
+my $files_fail = "SDL_config.h";
+my $matching = '#include "SDL_config_symbian.h"  /* must be before win32! */';
+if(checkfile($target . "\\include\\$files_fail", "\Q$matching"))
+	{
+	$files_fail = "SDL_FILES_OK";
+	$matching = "";
+	}
+	
+addit("SYMBIAN_SDL_FILES_FAIL", $files_fail);	
+addit("SYMBIAN_SDL_FILES_FAIL_REASON", "line is missing:\"$matching\"") if $matching ne "";	
+
+if(checkfile($epocroot . "releasenotes.txt", 'Symbian\S3'))
+	{
+	addit("SYMBIAN_SDL_SYMBIAN3", $epocroot);
+	}
+
+if(findenv("GCCE"))
+	{
+		addit("SYMBIAN_GCCE", "TRUE");
+	}
+
+if(findenv("RVCT"))
+	{
+		addit("SYMBIAN_RVCT", "TRUE");
+	}
+	
+if(open(VERFILE, "$target/symbian/version.txt"))
+{
+	while(<VERFILE>)
+		{
+		chomp;
+		if(/version\s*=\s*(.*)\s*?/)
+			{
+				my $ver = $1;
+				$ver =~ s/\s//g;
+				$ver =~ /(\d+\.\d+)/;
+				addit("SYMBIAN_SDL_VERSION", $1);
+			}
+		}
+		close(VERFILE);
+	}
+
+sub checkfile
+	{
+	my ($name, $match) = @_;
+	if(!open(FILE, $name))
+		{
+			warn  "$name : $!\n";
+			return 0;
+		}
+	my $found = 0;
+	while(<FILE>)
+		{
+		if(/$match/)
+			{
+			$found = 1;
+			last;
+			}
+		}
+	close(FILE);
+	return $found;
+	}
+
+sub dosify
+	{
+	my $s = shift;
+	$s =~ s/\//\\/g;
+	return $s;
+	}
+	
+sub addit
+	{
+	my ($key, $value) = @_;
+	print "$key=$value\n";
+#	warn "$key=$value\n";
+#	system ("REG ADD HKCU\\Environment /v $key /d \"$value\" /f > NIL");
+	}
+
+sub tempname 
+	{
+	my $dir = shift; 
+	$dir =~ s/\\/\//g;
+	$dir .= "/" unless($dir =~ /\/$/);
+	my $name;
+	do
+		{
+		$name = $dir . "~" . int(rand(100000)) . ".tmp";
+		}while(-e $name);
+	return $name;
+	}
+	
+	
+	sub findenv
+	{
+		my $var = shift;
+		for my $key ( keys %ENV ) 
+		{
+       return 1 if($key =~ /$var/i);
+    } 
+    return 0;
+	}

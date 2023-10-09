@@ -1,0 +1,17 @@
+tools for doing a SDL release (a zip) that is then 
+extracted on official SDL get from libsdl.org
+
+Markus Mertama 2009-2010
+
+sdl_release VERSION [nobuild]
+
+e.g.
+
+sdl_release 2.3.5
+
+
+
+
+
+
+
